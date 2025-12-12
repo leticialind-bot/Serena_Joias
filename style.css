@@ -20,6 +20,7 @@ body {
 
 .logo-serena .logo {
     width: 230px;
+    align-items: center;
 }
 
 .icons-right {
@@ -63,11 +64,16 @@ body {
     gap: 70px;                    
     margin-top: 10px;
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.menu-buttons :hover {
+    transform: scale(1.15);
 }
 
 .menu-buttons button {
     background: white;
-    border: 1px solid #bcbcbc;
+    border: 1px solid #ffffff;
     padding: 7px 28px;
     border-radius: 20px;
     font-size: 15px;
@@ -76,43 +82,72 @@ body {
 
 
 .carrossel {
-    background-color: #cdaa8f;
-    padding: 35px 0 45px;
+    padding: 90px 0;
+    background-color: var(#E1C3A9);
     text-align: center;
-
-    border-top-left-radius: 40px; 
-    border-top-right-radius: 40px;
+    
 }
 
-.carrossel .circle {
-    display: inline-block;
-    margin: 0 25px;
+.titulo-carrossel {
+    color: #f2d578;
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
 }
 
-.carrossel .circle img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+.carrossel-wrapper {
+    position: relative;
+    width: 330px;
+    margin: auto;
+}
+
+.carrossel-container {
+    width: 330px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 18px;
+    position: relative;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.carrossel .dots {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
+
+.item.ativo {
+    opacity: 1;
 }
 
-.carrossel .dots span {
-    width: 13px;
-    height: 13px;
-    background: #d8d8d8;
-    border-radius: 50%;
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    border: none;
+    color:#E1C3A9;
+    font-size: 26px;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: .3s;
 }
 
-.carrossel .dots .active {
-    background: #8a8a8a;
+.seta:hover {
+    background-color: var(#E1C3A9);
 }
+
+.esquerda { left: -50px; }
+.direita { right: -50px; }
 
 
 
@@ -126,6 +161,8 @@ body {
 .banner-colecao .right img {
     width: 100%;
     height: 900px;
+    background-size: cover;
+    height: 1000px;
 }
 
 
@@ -154,23 +191,69 @@ body {
 }
 
 
-
-.rodape {
-    background-color: #f4ebe4;
-    padding: 40px 0;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    display: flex;
-    justify-content: center;
+.mapa-contato {
+    background: #fff;
+    padding: 90px 20px;
+    text-align: center;
 }
 
-.icons-footer img {
-    width: 38px;
-    margin: 0 20px;
-    cursor: pointer;
+.mapa-container {
+    max-width: 900px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #f2c378;
 }
 
+.footer {
+    background: #E1C3A9;
+    padding: 60px 20px;
+    text-align: center;
+}
 
+.footer-logo {
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 26px;
+}
+
+.footer-text {
+    color: #000000;
+    margin: 20px 0 10px;
+    font-size: 15px;
+}
+
+.footer-social img {
+    width: 30px;
+    margin: 0 10px;
+    filter: brightness(0) invert(1);
+    transition: .3s;
+}
+
+.footer-social img:hover {
+    filter: invert(85%) sepia(80%) saturate(900%);
+}
+
+.copy {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #8e8e8e;
+}
+.contato-info {
+    margin-top: 40px;
+}
+
+.contato-info h2 {
+    color: #e1ad7c;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contato-info p {
+    color: #e7aa78;
+    font-size: 16px;
+    margin: 6px 0;
+}
 @media (max-width: 600px) {
 
     .logo-serena .logo {
