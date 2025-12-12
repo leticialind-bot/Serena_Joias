@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #e7d3c7;
+}
+
+
+.header-top {
+    background-color: #e7d3c7;
+    padding: 25px 50px;             
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-left {
+    width: 22px;
+}
+
+.logo-serena .logo {
+    width: 230px;
+}
+
+.icons-right {
+    display: flex;
+    gap: 18px;
+}
+
+.icons-right img {
+    width: 22px;
+    cursor: pointer;
+}
+
+
+.search-box {
+    width: 85%;
+    background: white;
+    margin: 5px auto 15px;        
+    border-radius: 40px;
+    border: 1px solid #cfcfcf;
+    padding: 12px 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-box img {
+    width: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 70px;                    
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-buttons button {
+    background: white;
+    border: 1px solid #bcbcbc;
+    padding: 7px 28px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.carrossel {
+    background-color: #cdaa8f;
+    padding: 35px 0 45px;
+    text-align: center;
+
+    border-top-left-radius: 40px; 
+    border-top-right-radius: 40px;
+}
+
+.carrossel .circle {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.carrossel .circle img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.carrossel .dots {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.carrossel .dots span {
+    width: 13px;
+    height: 13px;
+    background: #d8d8d8;
+    border-radius: 50%;
+}
+
+.carrossel .dots .active {
+    background: #8a8a8a;
+}
+
+
+
+.banner-colecao {
+    background: #f7eee9;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-colecao .right img {
+    width: 100%;
+    height: 900px;
+}
+
+
+.sobre {
+    background: #cdaa8f;
+    padding: 70px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .perfil {
+    width: 340px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.sobre .texto {
+    max-width: 500px;
+    font-size: 20px;
+    color: #3d2d25;
+    text-align: left;
+    line-height: 1.6;
+}
+
+
+
+.rodape {
+    background-color: #f4ebe4;
+    padding: 40px 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.icons-footer img {
+    width: 38px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+
+    .logo-serena .logo {
+        width: 190px;
+    }
+
+    .carrossel .circle img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .menu-buttons {
+        gap: 15px;
+    }
+
+    .search-box {
+        width: 92%;
+    }
+
+    .sobre .perfil {
+        width: 260px;
+    }
+
+    .sobre .texto {
+        font-size: 16px;
+    }
+}
+
+/* -------------------- Responsividade --------------- */
+
+@media screen and (max-width: 768px) {
+#sombra {
+        background-color: #9D562390;
+        backdrop-filter: blur(10px);
+        z-index: 1;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        right: -101vw;
+        transition: .5s;
+    }
+
+    #menu_botao {
+        display: block;
+        z-index: 1;
+    }
+
+nav.menu {
+        /* height: 100vh; */
+        width: 200px;
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 15px;
+
+        position: fixed;
+        top: 165px;
+        right: -210px;
+        z-index: 1;
+        transition: .5s;
+    }
+
+}
